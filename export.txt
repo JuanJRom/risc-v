@@ -1,0 +1,13 @@
+// primero de exporta esta ruta para poder usar "riscv64-unknown-elf-gcc"
+
+export PATH=$PATH:/opt/riscv/bin   
+
+// Una vez que se puede usar el compilador para crear el codigo objeto 
+
+riscv64-unknown-elf-gcc -o nombre nombre.c -static-libgcc -lm
+
+riscv64-unknown-elf-as -o nombre nombre.c -static-libgcc -lm   // este es para ensamblador
+
+// Ya que se tiene el condigo objeto se puede usar el simulador spike 
+
+spike  /usr/local/RISCV/riscv64-unknown-elf/bin/pk nombre
