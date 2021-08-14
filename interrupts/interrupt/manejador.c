@@ -1,15 +1,16 @@
 #include <stdio.h>
-
-#define  MTIME       *((volatile uint64_t *) 0x02000000 + 0xbff8)
-#define  MTIMECMP    *((volatile uint64_t *) 0x02000000 + 0x4000)
-
-#define  MTIME_INTERRUPT_PERIOD  12000000    // 24 MHz, so 12000000 generates an interrupt period of exactly half a second
+#include <stdint.h>
+#define CLINT_BASE 0x2000000
+#define MTIME (volatile unsigned long long int *)(CLINT_BASE + 0xbff8)
+#define MTIMECMP (volatile unsigned long long int *)(CLINT_BASE + 0x4000)
+//#define  MTIME       *((volatile uint64_t *) 0x02000000 + 0xbff8)
+//#define  MTIMECMP    *((volatile uint64_t *) 0x02000000 + 0x4000)
+//#define  MTIME_INTERRUPT_PERIOD  12000000    // 24 MHz, so 12000000 generates an interrupt period of exactly half a second
 
 void interruptHandler() __attribute__ ((interrupt, section(".interrupt_handler")));
 
 void interruptHandler() {
-    MTIME = 0;
-    MTIMECMP = MTIME_INTERRUPT_PERIOD;
+    *MTIMECMP = *MTIME + 0xfffff * 25;
   
     printf("Machine Interrupt");
 }
@@ -38,12 +39,13 @@ int main() {
     asm volatile ("csrsi mstatus, 8");
 
     // configure interrupt period
-    MTIME = 0;
-    MTIMECMP = MTIME_INTERRUPT_PERIOD;
+    //MTIME = 0;
+    //MTIMECMP = 10;
 
     // sleep
     while (1){
         asm volatile ("wfi");
+        printf("test");
     }  
     
     return 0;

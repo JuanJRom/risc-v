@@ -11,7 +11,7 @@ $ riscv64-unknown-elf-as -o nombre nombre.c -static-libgcc -lm   // este es para
 // For using with bare metal 
 $ riscv64-unknown-elf-gcc -fno-common -fno-builtin-printf -specs=htif_nano.specs -c hello.c
 $ riscv64-unknown-elf-gcc -static -specs=htif_nano.specs hello.o -o hello.riscv
-$ spike hello.riscvcd
+$ spike hello.riscv
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
