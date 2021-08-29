@@ -60,4 +60,9 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+# Executables files of riscv 
+*riscv
+
+#Images
+.img
 # End of https://www.gitignore.io/api/c,assembler
