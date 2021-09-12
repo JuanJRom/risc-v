@@ -80,4 +80,14 @@ $ ../configure --prefix=/opt/riscv/ --host=riscv64-unknown-elf
 $ make
 $ sudo make install
 ************************************************************************************************************
+*****************************************Options of compile*************************************************
+
+compilador 
+riscv64-unknown-elf-gcc -g interrupt.c entry.S init.c -DNHARTS=1 -I ../env -T targets/RISC-V/spike64.lds -nostartfiles -mcmodel=medany -DXLEN=64 -o interrupt_out -march=rv64imafc -mabi=lp64
+
+compilador 
+riscv64-unknown-elf-gcc -g checksum.c tiny-malloc.c infinite_loop.S -DDEFINE_MALLOC -DDEFINE_FREE entry.S init.c -DNHARTS=1 -I ../env -T targets/RISC-V/spike64.lds -nostartfiles -mcmodel=medany -DXLEN=64 -o spike64_interrupt_out -march=rv64imafc -mabi=lp64
+
+spike 
+spike -p1 --isa RV64IMAFC --dm-auth --dm-progsize 0 --dm-sba 64 --dm-abstract-rti 30 -m0x1212340000:0x10000000 --rbb-port 0 spike64_interrupt_out
 
