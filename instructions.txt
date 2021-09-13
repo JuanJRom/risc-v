@@ -82,7 +82,7 @@ $ sudo make install
 ************************************************************************************************************
 *****************************************Options of compile*************************************************
 
-compilador 
+compilador       *********the leater -T is for introduce a linker file**************************************
 riscv64-unknown-elf-gcc -g interrupt.c entry.S init.c -DNHARTS=1 -I ../env -T targets/RISC-V/spike64.lds -nostartfiles -mcmodel=medany -DXLEN=64 -o interrupt_out -march=rv64imafc -mabi=lp64
 
 compilador 
