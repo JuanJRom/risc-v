@@ -1,5 +1,7 @@
 #include "riscv.h"
 #include "uart.h"
+#include "list.h"
+#include "proccess.h"
 #define CLINT_BASE 0x2000000
 #define MTIME (volatile unsigned long long int *)(CLINT_BASE + 0xbff8)
 #define MTIMECMP (volatile unsigned long long int *)(CLINT_BASE + 0x4000)
@@ -13,6 +15,9 @@ void handle_interrupt(uint64_t mcause) {
        // print_s("Interrupcion del temporizador: ");
        // print_i(++count);
        process_2(ptr);
+       PCB_t pcbs;
+
+       //print_i(pcbs.state);
 
         *MTIMECMP = *MTIME + 0xfffff * 2;
         if (count == 9) {

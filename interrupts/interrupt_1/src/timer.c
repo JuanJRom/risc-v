@@ -13,7 +13,7 @@ void timer_init() {
     w_mepc((uint64_t)main);
 
     // setup trap_entry
-    w_mtvec((uint64_t)trap_entry);
+    w_mtvec((uint64_t)trap_entry);  //this contains the address the processor jumps to
 
     *MTIMECMP = *MTIME + 0xfffff * 2;
     uint64_t mie = r_mie();

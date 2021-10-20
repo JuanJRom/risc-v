@@ -3,8 +3,8 @@
 
 .section .text.timer_init
 
-#.globl _start
-#_start:
+.globl _start
+_start:
 #    csrr   t0, mhartid
 #    lui    t1, 0
 #    beq    t0, t1, 2f

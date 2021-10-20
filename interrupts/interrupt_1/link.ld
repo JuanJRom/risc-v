@@ -1,5 +1,10 @@
-OUTPUT_ARCH( "riscv" )
-/*ENTRY( _start )*/
+/*OUTPUT_FORMAT( “elf64-littleriscv” )ENTRY(_start)/* specify the output as executable and linking format ->
+                                                    *.elf , and in 32 bits little endian*/
+
+OUTPUT_ARCH( "riscv" ) /*specify the output architecture is RISCV */
+
+ENTRY(_start) /*set the start address as startup.s, function the same as –entry _filename in the command line
+                if setting both at the same time, the command line has priority */
 
 MEMORY
 {
@@ -22,8 +27,8 @@ SECTIONS
     PROVIDE(_text_end = .);  */
   } >ram AT>ram :text
 
- /* . = ALIGN(0x1000);
-  etext = .;*/
+  . = ALIGN(0x1000);
+  etext = .;
 
   .sdata : {
     _gp = . + 0x800;
@@ -31,7 +36,7 @@ SECTIONS
     *(.srodata*)
     *(.sdata .sdata.* .gnu.linkonce.s.*) */
   }
-  /*
+  
   .rodata : {
     PROVIDE(_rodata_start = .);
     *(.rodata .rodata.*)
@@ -45,7 +50,6 @@ SECTIONS
     PROVIDE(_data_end = .);
   } >ram AT>ram :data
 
-  */
   .bss :{
   /*  PROVIDE(_bss_start = .);
     *(.sbss .sbss.*) *(.bss .bss.*)
