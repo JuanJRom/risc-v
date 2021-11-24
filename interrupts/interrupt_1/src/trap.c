@@ -1,26 +1,21 @@
-#include "riscv.h"
-#include "uart.h"
-#include "list.h"
-#include "proccess.h"
+#include "trap.h"
 #define CLINT_BASE 0x2000000
 #define MTIME (volatile unsigned long long int *)(CLINT_BASE + 0xbff8)
 #define MTIMECMP (volatile unsigned long long int *)(CLINT_BASE + 0x4000)
-
 int count = 0;
-int *ptr = &count;
-extern void process_2();
+
+extern int test(int);
 
 void handle_interrupt(uint64_t mcause) {
     if ((mcause << 1 >> 1) == 0x7) {
-       // print_s("Interrupcion del temporizador: ");
-       // print_i(++count);
-       process_2(ptr);
-       PCB_t pcbs;
+        // print_s("Interrupcion del temporizador: ");
+        // print_i(++count); 
 
-       //print_i(pcbs.state);
+        task_run();
+        //++count;
 
-        *MTIMECMP = *MTIME + 0xfffff * 2;
-        if (count == 9) {
+        *MTIMECMP = *MTIME + 0xfffff * 10;
+        if (count == 10) {
             unsigned long long int mie;
             asm volatile("csrr %0, mie" : "=r"(mie));
             mie &= ~(1 << 7);

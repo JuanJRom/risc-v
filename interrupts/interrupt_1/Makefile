@@ -1,12 +1,12 @@
 SHELL = /bin/sh
-ARCH = riscv64-linux-gnu
+ARCH = riscv64-linux-gnu#riscv64-unknown-elf
 CC = $(ARCH)-gcc
 LD = $(ARCH)-ld
 OBJCOPY = $(ARCH)-objcopy
 IDIR = inc
 SDIR = src
 BDIR = build
-CFLAGS = -Wall -mcmodel=medany -g -I $(IDIR) -O0
+CFLAGS = -Wall -mcmodel=medany -g -I $(IDIR) -O0  #-march=rv64imafc -mabi=lp64 -Wall
 SFLAGS = -g -I $(IDIR)
 OBJCOPY = $(ARM)-objcopy
 S_SRCS = $(wildcard $(SDIR)/*.s)

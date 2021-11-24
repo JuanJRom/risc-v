@@ -13,9 +13,9 @@ _start:
 #    j      1b
 
 #2:
-1:
+#1:
     # initialize global pointer
-    la gp, _gp
+#    la gp, _gp
   
     # initialize stack pointer
     la sp, stack_top

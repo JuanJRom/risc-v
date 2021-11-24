@@ -22,9 +22,9 @@ SECTIONS
 {
   .text : {
     *(.text.timer_init);
-   /* PROVIDE(_text_start = .);*/
-   /* *(.text.init) *(.text .text.*)
-    PROVIDE(_text_end = .);  */
+    PROVIDE(_text_start = .);
+    *(.text.init) *(.text .text.*)
+    PROVIDE(_text_end = .);  
   } >ram AT>ram :text
 
   . = ALIGN(0x1000);
@@ -32,9 +32,9 @@ SECTIONS
 
   .sdata : {
     _gp = . + 0x800;
-   /* *(.srodata.cst16) *(.srodata.cst8) *(.srodata.cst4) *(.srodata.cst2)
+    *(.srodata.cst16) *(.srodata.cst8) *(.srodata.cst4) *(.srodata.cst2)
     *(.srodata*)
-    *(.sdata .sdata.* .gnu.linkonce.s.*) */
+    *(.sdata .sdata.* .gnu.linkonce.s.*) 
   }
   
   .rodata : {
@@ -51,9 +51,9 @@ SECTIONS
   } >ram AT>ram :data
 
   .bss :{
-  /*  PROVIDE(_bss_start = .);
+   PROVIDE(_bss_start = .);
     *(.sbss .sbss.*) *(.bss .bss.*)
-    PROVIDE(_bss_end = .);*/
+    PROVIDE(_bss_end = .);
   } >ram AT>ram :bss
 
   PROVIDE(_memory_start = ORIGIN(ram));

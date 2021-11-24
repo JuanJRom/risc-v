@@ -10,15 +10,18 @@ extern void trap_entry();
 void timer_init() {
 
     // requires gcc -mcmodel=medany
-    w_mepc((uint64_t)main);
-
+    w_mepc((uint64_t)main);   //update mepc with current instruction address
     // setup trap_entry
     w_mtvec((uint64_t)trap_entry);  //this contains the address the processor jumps to
 
-    *MTIMECMP = *MTIME + 0xfffff * 2;
+    *MTIMECMP = *MTIME + 0xfffff * 35;
     uint64_t mie = r_mie();
     mie |= (1 << 7);
+    
     w_mie(mie);
+    
+    uart_init();
+    kinit();
 
     // switch to machine mode and jump to main().
     asm volatile("mret");

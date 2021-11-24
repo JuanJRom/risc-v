@@ -1,11 +1,5 @@
 #include "list.h"
 
-struct node {
-   int data;
-   int key;
-   struct node *next;
-};
-
 struct node *head = NULL;
 struct node *current = NULL;
 
@@ -30,11 +24,9 @@ void printList() {
 }
 
 //insert link at the first location
-void insertFirst(int key, int data) {
+void insertFirst(int key, task_callback_t data) {
    //create a link
-   kinit();
    struct node *link = (struct node*) kalloc(sizeof(struct node));
-	
    link->key = key;
    link->data = data;
 	
@@ -43,6 +35,26 @@ void insertFirst(int key, int data) {
 	
    //point first to new first node
    head = link;
+}
+
+//insert link at the last location
+void insertLast(int key, task_callback_t data) {
+   //create a link
+   struct node *tempLink;
+   struct node *link = (struct node*) kalloc(sizeof(struct node));
+   link->key = key;
+   link->data = data;
+	
+   if(head == NULL){
+      link->next = head;
+      head = link;
+   }else{
+      tempLink = head;
+      while(tempLink->next !=NULL){
+         tempLink = tempLink->next;
+      }
+      tempLink->next = link;
+   }
 }
 
 //delete first item
@@ -141,7 +153,8 @@ struct node* delete(int key) {
 
 void sort() {
 
-   int i, j, k, tempKey, tempData;
+   int i, j, k, tempKey;
+   task_callback_t tempData;
    struct node *current;
    struct node *next;
 	
@@ -194,17 +207,14 @@ void test_list() {
    insertFirst(4,1);
    insertFirst(5,40);
    insertFirst(6,56); 
-
    print_s("Original List: "); 
 	
    //print list
    printList();
-
    while(!isEmpty()) {            
       struct node *temp = deleteFirst();
       print_s("\nDeleted value:");
       //printf("(%d,%d) ",temp->key,temp->data);
-
       print_s("( ");
       print_i(temp->key);
       print_s(" , ");
@@ -224,7 +234,6 @@ void test_list() {
    print_s("\nRestored List: ");
    printList();
    print_s("\n");  
-
    struct node *foundLink = find(4);
 	
    if(foundLink != NULL) {
@@ -239,7 +248,6 @@ void test_list() {
    } else {
       print_s("Element not found.");
    }
-
    delete(4);
    print_s("List after deleting an item: ");
    printList();

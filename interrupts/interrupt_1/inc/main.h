@@ -1,6 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <timer.h>
+#include <stdio.h>
+#include "trap.h"
+#include "uart.h"
+#include "proccess.h"
+#include "task_scheduler.h"
+
 int main();
-void process_1(int *count);
-void process_2(int *count_1);
 #endif

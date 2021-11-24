@@ -1,44 +1,8 @@
 .globl trap_entry
 .align 4
 trap_entry:
-        # make room to save registers.
-        addi sp, sp, -256
-
-        # save the registers.
-        sd ra, 0(sp)
-        sd sp, 8(sp)
-        sd gp, 16(sp)
-        sd tp, 24(sp)
-        sd t0, 32(sp)
-        sd t1, 40(sp)
-        sd t2, 48(sp)
-        sd s0, 56(sp)
-        sd s1, 64(sp)
-        sd a0, 72(sp)
-        sd a1, 80(sp)
-        sd a2, 88(sp)
-        sd a3, 96(sp)
-        sd a4, 104(sp)
-        sd a5, 112(sp)
-        sd a6, 120(sp)
-        sd a7, 128(sp)
-        sd s2, 136(sp)
-        sd s3, 144(sp)
-        sd s4, 152(sp)
-        sd s5, 160(sp)
-        sd s6, 168(sp)
-        sd s7, 176(sp)
-        sd s8, 184(sp)
-        sd s9, 192(sp)
-        sd s10, 200(sp)
-        sd s11, 208(sp)
-        sd t3, 216(sp)
-        sd t4, 224(sp)
-        sd t5, 232(sp)
-        sd t6, 240(sp)
-
+        jal store_context
         call handle_trap
-  
         # restore registers.
         ld ra, 0(sp)
         ld sp, 8(sp)
@@ -73,16 +37,12 @@ trap_entry:
         ld t6, 240(sp)
 
         addi sp, sp, 256
-
         mret
 
-.globl switch_context
-.align 4
-
-switch_context:
+.globl store_context
+store_context:
         # make room to save registers.
         addi sp, sp, -256
-
         # save the registers.
         sd ra, 0(sp)
         sd sp, 8(sp)
@@ -115,10 +75,12 @@ switch_context:
         sd t4, 224(sp)
         sd t5, 232(sp)
         sd t6, 240(sp)
-
         #call push_queue
+        ret
   
-restore:
+.globl load_context
+#.align 4
+load_context:
         # restore registers.
         ld ra, 0(sp)
         ld sp, 8(sp)
@@ -153,7 +115,6 @@ restore:
         ld t6, 240(sp)
 
         addi sp, sp, 256
-
         ret
 
 
