@@ -23,7 +23,7 @@ void process_3(/*int *count_2*/ ){
 }
 
 void process_4(/*int *count_2*/ ){
-    static int8_t count_3;
+    int8_t count_3;
     print_s("Proceso cuatro: ");
     print_i(++count_3);
     //print_s("\n");

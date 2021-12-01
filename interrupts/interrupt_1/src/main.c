@@ -13,8 +13,7 @@ int main(){
     
     //task_create(5, process_5);
     //task_create(6, process_6);
-    //task_end(proccess_1);  //trap_entry
-    //task_wait();
+    
    while (1){
         asm volatile ("wfi");
         //schedule task 

@@ -1,6 +1,4 @@
 #include "kalloc.h"
-//#include "memorylayout.h"
-//#include "memutils.h"
 #include "riscv.h"
 #include "stdint.h"
 #include "uart.h"

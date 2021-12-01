@@ -6,23 +6,23 @@
 #include "kalloc.h"
 #include "stdint.h"
 
-typedef  void (*task_callback_t)(void/*int *count*/);
+typedef void (*task_callback_t)(void/*int *count*/);
 
-struct node {
-   task_callback_t data;
-   int key;
+struct PCB {
+   task_callback_t task;
+   int id;
    int state;
-   int *address_memory;
-   struct node *next;
+   int registers;
+   struct PCB *next;
 };
 
-void insertFirst(int key, task_callback_t data);
-void insertLast(int key, task_callback_t data);
-struct node* deleteFirst();
+void insertFirst(int id, task_callback_t task, int registers);
+void insertLast(int id, task_callback_t task);
+struct PCB* deleteFirst();
 bool isEmpty();
 int length();
-struct node* find(int key);
-struct node* delete(int key);
+struct PCB* find(int id);
+struct PCB* delete(int id);
 void sort();
 void reverse();
 

@@ -1,21 +1,21 @@
 #include "list.h"
 
-struct node *head = NULL;
-struct node *current = NULL;
+struct PCB *head = NULL;
+struct PCB *current = NULL;
 
 
 //display the list
 void printList() {
-   struct node *ptr = head;
+   struct PCB *ptr = head;
    print_s("\n[ ");
 	
    //start from the beginning
    while(ptr != NULL) {
-      //printf("(%d,%d) ",ptr->key,ptr->data);
+      //printf("(%d,%d) ",ptr->id,ptr->task);
       print_s("( ");
-      print_i(ptr->key);
+      print_i(ptr->id);
       print_s(" , ");
-      print_i(ptr->data);
+      print_i(ptr->task);
       print_s(") ");
       ptr = ptr->next;
    }
@@ -24,26 +24,27 @@ void printList() {
 }
 
 //insert link at the first location
-void insertFirst(int key, task_callback_t data) {
+void insertFirst(int id, task_callback_t task, int registers) {
    //create a link
-   struct node *link = (struct node*) kalloc(sizeof(struct node));
-   link->key = key;
-   link->data = data;
+   struct PCB *link = (struct PCB*) kalloc(sizeof(struct PCB));
+   link->id = id;
+   link->task = task;
+   link->registers = registers;
 	
-   //point it to old first node
+   //point it to old first PCB
    link->next = head;
 	
-   //point first to new first node
+   //point first to new first PCB
    head = link;
 }
 
 //insert link at the last location
-void insertLast(int key, task_callback_t data) {
+void insertLast(int id, task_callback_t task) {
    //create a link
-   struct node *tempLink;
-   struct node *link = (struct node*) kalloc(sizeof(struct node));
-   link->key = key;
-   link->data = data;
+   struct PCB *tempLink;
+   struct PCB *link = (struct PCB*) kalloc(sizeof(struct PCB));
+   link->id = id;
+   link->task = task;
 	
    if(head == NULL){
       link->next = head;
@@ -58,10 +59,10 @@ void insertLast(int key, task_callback_t data) {
 }
 
 //delete first item
-struct node* deleteFirst() {
+struct PCB* deleteFirst() {
 
    //save reference to first link
-   struct node *tempLink = head;
+   struct PCB *tempLink = head;
 	
    //mark next to first link as first 
    head = head->next;
@@ -77,7 +78,7 @@ bool isEmpty() {
 
 int length() {
    int length = 0;
-   struct node *current;
+   struct PCB *current;
 	
    for(current = head; current != NULL; current = current->next) {
       length++;
@@ -86,11 +87,11 @@ int length() {
    return length;
 }
 
-//find a link with given key
-struct node* find(int key) {
+//find a link with given id
+struct PCB* find(int id) {
 
    //start from the first link
-   struct node* current = head;
+   struct PCB* current = head;
 
    //if list is empty
    if(head == NULL) {
@@ -98,9 +99,9 @@ struct node* find(int key) {
    }
 
    //navigate through list
-   while(current->key != key) {
+   while(current->id != id) {
 	
-      //if it is last node
+      //if it is last PCB
       if(current->next == NULL) {
          return NULL;
       } else {
@@ -109,16 +110,16 @@ struct node* find(int key) {
       }
    }      
 	
-   //if data found, return the current Link
+   //if task found, return the current Link
    return current;
 }
 
-//delete a link with given key
-struct node* delete(int key) {
+//delete a link with given id
+struct PCB* delete(int id) {
 
    //start from the first link
-   struct node* current = head;
-   struct node* previous = NULL;
+   struct PCB* current = head;
+   struct PCB* previous = NULL;
 	
    //if list is empty
    if(head == NULL) {
@@ -126,9 +127,9 @@ struct node* delete(int key) {
    }
 
    //navigate through list
-   while(current->key != key) {
+   while(current->id != id) {
 
-      //if it is last node
+      //if it is last PCB
       if(current->next == NULL) {
          return NULL;
       } else {
@@ -153,10 +154,10 @@ struct node* delete(int key) {
 
 void sort() {
 
-   int i, j, k, tempKey;
-   task_callback_t tempData;
-   struct node *current;
-   struct node *next;
+   int i, j, k, temp_id;
+   task_callback_t tempTask;
+   struct PCB *current;
+   struct PCB *next;
 	
    int size = length();
    k = size ;
@@ -167,14 +168,14 @@ void sort() {
 		
       for ( j = 1 ; j < k ; j++ ) {   
 
-         if ( current->data > next->data ) {
-            tempData = current->data;
-            current->data = next->data;
-            next->data = tempData;
+         if ( current->task > next->task ) {
+            tempTask = current->task;
+            current->task = next->task;
+            next->task = tempTask;
 
-            tempKey = current->key;
-            current->key = next->key;
-            next->key = tempKey;
+            temp_id = current->id;
+            current->id = next->id;
+            next->id = temp_id;
          }
 			
          current = current->next;
@@ -183,10 +184,10 @@ void sort() {
    }   
 }
 
-void reverse(struct node** head_ref) {
-   struct node* prev   = NULL;
-   struct node* current = *head_ref;
-   struct node* next;
+void reverse(struct PCB** head_ref) {
+   struct PCB* prev   = NULL;
+   struct PCB* current = *head_ref;
+   struct PCB* next;
 	
    while (current != NULL) {
       next  = current->next;
@@ -212,13 +213,13 @@ void test_list() {
    //print list
    printList();
    while(!isEmpty()) {            
-      struct node *temp = deleteFirst();
+      struct PCB *temp = deleteFirst();
       print_s("\nDeleted value:");
-      //printf("(%d,%d) ",temp->key,temp->data);
+      //printf("(%d,%d) ",temp->id,temp->task);
       print_s("( ");
-      print_i(temp->key);
+      print_i(temp->id);
       print_s(" , ");
-      print_i(temp->data);
+      print_i(temp->task);
       print_s(") ");
    }  
 	
@@ -234,15 +235,15 @@ void test_list() {
    print_s("\nRestored List: ");
    printList();
    print_s("\n");  
-   struct node *foundLink = find(4);
+   struct PCB *foundLink = find(4);
 	
    if(foundLink != NULL) {
       print_s("Element found: ");
-      //printf("(%d,%d) ",foundLink->key,foundLink->data);
+      //printf("(%d,%d) ",foundLink->id,foundLink->task);
       print_s("( ");
-      print_i(foundLink->key);
+      print_i(foundLink->id);
       print_s(" , ");
-      print_i(foundLink->data);
+      print_i(foundLink->task);
       print_s(") ");
       print_s("\n");  
    } else {
@@ -256,11 +257,11 @@ void test_list() {
 	
    if(foundLink != NULL) {
       print_s("Element found: ");
-      //printf("(%d,%d) ",foundLink->key,foundLink->data);
+      //printf("(%d,%d) ",foundLink->id,foundLink->task);
       print_s("( ");
-      print_i(foundLink->key);
+      print_i(foundLink->id);
       print_s(" , ");
-      print_i(foundLink->data);
+      print_i(foundLink->task);
       print_s(") ");
       print_s("\n"); 
       print_s("\n");
@@ -271,10 +272,10 @@ void test_list() {
    print_s("\n");
    sort();
 	
-   print_s("List after sorting the data: ");
+   print_s("List after sorting the task: ");
    printList();
 	
    reverse(&head);
-   print_s("\nList after reversing the data: ");
+   print_s("\nList after reversing the task: ");
    printList();
 }*/

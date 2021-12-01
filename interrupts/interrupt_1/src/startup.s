@@ -19,5 +19,5 @@ _start:
   
     # initialize stack pointer
     la sp, stack_top
-    call   timer_init
+    call   system_init
 
