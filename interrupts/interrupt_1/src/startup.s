@@ -1,7 +1,7 @@
 #.equ REGBYTES, 8
 #.equ STACK_SIZE,  ((1 << 12) - 128) 
 
-.section .text.timer_init
+.section .text.system_init
 
 .globl _start
 _start:
@@ -15,7 +15,7 @@ _start:
 #2:
 #1:
     # initialize global pointer
-#    la gp, _gp
+    #la gp, _gp
   
     # initialize stack pointer
     la sp, stack_top

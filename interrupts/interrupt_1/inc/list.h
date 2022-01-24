@@ -12,7 +12,9 @@ struct PCB {
    task_callback_t task;
    int id;
    int state;
-   int registers;
+   long long int registers;
+   int procces_stack[40];         // Reserva de espacio para el proceso 
+   int *sp_procces;               // stack pointer que apunta al stack 
    struct PCB *next;
 };
 

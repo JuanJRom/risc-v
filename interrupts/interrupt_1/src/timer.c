@@ -16,9 +16,9 @@ void system_init() {
 
     *MTIMECMP = *MTIME + 0xfffff * 5;
     uint64_t mie = r_mie();
-    mie |= (1 << 7);
-    
-    w_mie(mie);
+    mie |= (1 << 7);   
+
+    w_mie(mie); //Enable machine interrupts
     
     uart_init();
     kinit();

@@ -21,7 +21,7 @@ PHDRS
 SECTIONS
 {
   .text : {
-    *(.text.timer_init);
+    *(.text.system_init);
     PROVIDE(_text_start = .);
     *(.text.init) *(.text .text.*)
     PROVIDE(_text_end = .);  

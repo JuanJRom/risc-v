@@ -29,7 +29,8 @@ void insertFirstQueue(int id, task_callback_t task, int registers) {
    struct PCB *link = (struct PCB*) kalloc(sizeof(struct PCB));
    link->id = id;
    link->task = task;
-   link->registers;
+   link->registers = registers;
+   
    //point it to old first node
    link->next = head_Queue;
 	

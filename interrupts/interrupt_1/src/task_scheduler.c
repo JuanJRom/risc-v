@@ -1,6 +1,6 @@
 #include "task_scheduler.h"
 
-extern int store_context(void);
+extern int store_context(void/*int registers*/);
 
 //PCB_t *listHead = NULL;
 //PCB_t * volatile executeQueueHead = NULL;
@@ -19,16 +19,13 @@ void task_create(int  id, task_callback_t task)
 void task_exec()
 {
    if(length()){
-        
-       /* int length_temp = length();
-        for (int i = 0; i <length_temp; ++i)
-        {
-            temp[i] = deleteFirst();
-            temp[i]->task();
-        } */
         temp = deleteFirst();
         temp->task();
-        temp->registers = store_context();
+        //print_s(" registers: ");
+        //print_i(temp->registers);
+        //temp->registers = store_context(/*temp->registers*/);
+        //print_s(" registers: ");
+        //print_i(temp->registers);
         insertFirstQueue(temp->id, temp->task, temp->registers );
        
     }else{
@@ -37,9 +34,7 @@ void task_exec()
             for (int i = 0; i <length_temp; ++i) {
                 dummy[i] = deleteFirstQueue();
                 insertFirst(dummy[i]->id, dummy[i]->task, dummy[i]->registers );
-            } 
-            //temp = deleteFirstQueue();
-            
+            }             
         }
         
         /*
@@ -51,6 +46,11 @@ void task_exec()
         */
     }
 }
+
+void task_end(){
+    temp = deleteFirst();
+};
+
 
 
 

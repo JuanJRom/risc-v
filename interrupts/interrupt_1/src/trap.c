@@ -4,22 +4,17 @@
 #define MTIMECMP (volatile unsigned long long int *)(CLINT_BASE + 0x4000)
 int count = 1;
 
-extern int test(int);
-
 void handle_interrupt(uint64_t mcause) {
     if ((mcause << 1 >> 1) == 0x7) {
         //print_s("Interrupcion del temporizador: ");
         // print_i(++count); 
-        
-        //count = test(count);
         //print_i(count); 
         //print_s("\n");
 
         task_exec();
-        //++count;
-
+        count ++;
         *MTIMECMP = *MTIME + 0xfffff * 5;
-        if (count == 10) {
+        if (count == 46) {
             unsigned long long int mie;
             asm volatile("csrr %0, mie" : "=r"(mie));
             mie &= ~(1 << 7);
