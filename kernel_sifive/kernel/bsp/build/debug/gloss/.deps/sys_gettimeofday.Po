@@ -1,5 +1,5 @@
 gloss/sys_gettimeofday.o: \
- C\:/wsFreedomStudio/kernel/freedom-metal/gloss/sys_gettimeofday.c \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/gloss/sys_gettimeofday.c \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\errno.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\errno.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\reent.h \
@@ -16,7 +16,7 @@ gloss/sys_gettimeofday.o: \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\lock.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\assert.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\_ansi.h \
- C\:/wsFreedomStudio/kernel/freedom-metal/metal/timer.h \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/timer.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\time.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\cdefs.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_timeval.h \
@@ -51,7 +51,7 @@ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\lock.h:
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\assert.h:
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\_ansi.h:
-C\:/wsFreedomStudio/kernel/freedom-metal/metal/timer.h:
+C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/timer.h:
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\time.h:
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\cdefs.h:
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_timeval.h:

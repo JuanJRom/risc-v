@@ -1,1 +1,2 @@
-src/scrub.o: C\:/wsFreedomStudio/kernel/freedom-metal/src/scrub.S
+src/scrub.o: \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/src/scrub.S

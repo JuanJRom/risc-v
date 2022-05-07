@@ -1,5 +1,5 @@
 gloss/sys_getpid.o: \
- C\:/wsFreedomStudio/kernel/freedom-metal/gloss/sys_getpid.c \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/gloss/sys_getpid.c \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\errno.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\errno.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\reent.h \

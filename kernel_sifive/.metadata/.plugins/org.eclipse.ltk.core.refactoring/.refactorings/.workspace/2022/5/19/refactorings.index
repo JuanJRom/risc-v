@@ -1,1 +1,3 @@
-1651640783102	Rename resource 'kernel_1'
+1651962122713	Delete resource 'kernel_list_semaphore/src/main.c'
+1651962316172	Delete resource 'kernel_list_semaphore'
+1651962693224	Delete resource 'qemu_sifive_e31_hello'

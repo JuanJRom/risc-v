@@ -1,5 +1,6 @@
-src/clock.o: C\:/wsFreedomStudio/kernel/freedom-metal/src/clock.c \
- C\:/wsFreedomStudio/kernel/freedom-metal/metal/clock.h \
+src/clock.o: \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/src/clock.c \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/clock.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\lib\gcc\riscv64-unknown-elf\10.2.0\include\stddef.h
-C\:/wsFreedomStudio/kernel/freedom-metal/metal/clock.h:
+C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/clock.h:
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\lib\gcc\riscv64-unknown-elf\10.2.0\include\stddef.h:

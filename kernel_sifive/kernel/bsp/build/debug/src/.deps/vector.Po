@@ -1,1 +1,2 @@
-src/vector.o: C\:/wsFreedomStudio/kernel/freedom-metal/src/vector.S
+src/vector.o: \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/src/vector.S

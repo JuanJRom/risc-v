@@ -1,4 +1,4 @@
 gloss/sys_exit.o: \
- C\:/wsFreedomStudio/kernel/freedom-metal/gloss/sys_exit.c \
- C\:/wsFreedomStudio/kernel/freedom-metal/metal/shutdown.h
-C\:/wsFreedomStudio/kernel/freedom-metal/metal/shutdown.h:
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/gloss/sys_exit.c \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/shutdown.h
+C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/shutdown.h:

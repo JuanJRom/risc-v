@@ -40,38 +40,17 @@
 		<item value="org.eclipse.xtext.xbase.lib:2.24.0.v20201130-0912"/>
 		<item value="org.eclipse.xtext.xbase:2.24.0.v20201130-1016"/>
 	</list>
-	<section name="CleanDialogSettings">
-		<item key="TOGGLE_SELECTED" value="false"/>
-		<item key="DIALOG_WIDTH" value="500"/>
-		<item key="DIALOG_HEIGHT" value="389"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
-	</section>
-	<section name="SaveAsDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="546"/>
-		<item key="DIALOG_Y_ORIGIN" value="52"/>
-		<item key="DIALOG_WIDTH" value="525"/>
-		<item key="DIALOG_HEIGHT" value="580"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
-	</section>
 	<section name="SmartImportWizard">
 		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
 		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
-	</section>
-	<section name="NewWizardAction">
-	</section>
-	<section name="ExternalProjectImportWizard">
-		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
-		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\wsFreedomStudio\"/>
-		</list>
-		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
-			<item value=""/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\jjrh\Dropbox\Telecom\Tesis\Source\kernel_sifive\kernel_list_semaphore"/>
+			<item value="C:\Users\jjrh\Dropbox\Telecom\Tesis\Source\kernel_sifive\qemu_sifive_e31_hello"/>
+			<item value="C:\Users\jjrh\Dropbox\Telecom\Tesis\Source\kernel_sifive\kernel_semaphore"/>
+			<item value="C:\Users\jjrh\Dropbox\Telecom\Tesis\Source\kernel_sifive\kernel_list"/>
+			<item value="C:\Users\jjrh\Dropbox\Telecom\Tesis\Source\kernel_sifive\kernel"/>
 		</list>
 	</section>
 </section>

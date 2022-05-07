@@ -1,4 +1,4 @@
 src/drivers/sifive_clic0.o: \
- C\:/wsFreedomStudio/kernel/freedom-metal/src/drivers/sifive_clic0.c \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/src/drivers/sifive_clic0.c \
  metal/machine/platform.h
 metal/machine/platform.h:

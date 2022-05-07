@@ -1,1 +1,2 @@
-src/trap.o: C\:/wsFreedomStudio/kernel/freedom-metal/src/trap.S
+src/trap.o: \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/src/trap.S

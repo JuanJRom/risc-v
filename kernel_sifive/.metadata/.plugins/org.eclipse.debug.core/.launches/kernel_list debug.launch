@@ -2,9 +2,9 @@
 <launchConfiguration type="com.sifive.gnumcueclipse.debug.gdbjtag.qemu.launchConfigurationType">
     <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.DeviceTreeArch" value="riscv:rv32"/>
     <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.DeviceTreeCore" value="cpu@0"/>
-    <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.DeviceTreeExpr" value="C:\wsFreedomStudio\kernel_list\bsp\design.dts"/>
+    <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.DeviceTreeExpr" value="C:\Users\jjrh\Dropbox\Telecom\Tesis\Source\kernel_sifive\kernel_list\bsp\design.dts"/>
     <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.DeviceTreeHwBp" value="4"/>
-    <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.DeviceTreePath" value="C:\wsFreedomStudio\kernel_list\bsp\design.dts"/>
+    <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.DeviceTreePath" value="C:\Users\jjrh\Dropbox\Telecom\Tesis\Source\kernel_sifive\kernel_list\bsp\design.dts"/>
     <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.FpgaImageExpr" value=""/>
     <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.FpgaImagePath" value=""/>
     <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.HwBreakpointLimit" value=""/>
@@ -12,7 +12,7 @@
     <stringAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.TargetArch" value=""/>
     <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.qemu.disableGraphics" value="true"/>
     <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.qemu.doContinue" value="true"/>
-    <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.qemu.doDebugInRam" value="false"/>
+    <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.qemu.doDebugInRam" value="true"/>
     <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.qemu.doFirstReset" value="false"/>
     <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.qemu.doGdbServerAllocateConsole" value="true"/>
     <booleanAttribute key="com.sifive.gnumcueclipse.debug.gdbjtag.qemu.doSecondReset" value="true"/>

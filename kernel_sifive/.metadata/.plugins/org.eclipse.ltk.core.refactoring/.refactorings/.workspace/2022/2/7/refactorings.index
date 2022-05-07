@@ -1,6 +1,0 @@
-1644118344127	Delete resource 'spike_hello'
-1644118734704	Delete resource 'sifive_hifive1_revb_hello'
-1644118916766	Delete resource 'sifive_hifive1_revb_hello'
-1644351642968	Delete resource 'qemu_sifive_e31_timer_interrupt'
-1644352224682	Delete resource 'qemu_sifive_e31_plic_interrupts'
-1644355881323	Delete resource 'kernel/src/kernel.h'

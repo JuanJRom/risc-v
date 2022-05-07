@@ -1,8 +1,9 @@
-src/hpm.o: C\:/wsFreedomStudio/kernel/freedom-metal/src/hpm.c \
- C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/riscv_cpu.h \
- C\:/wsFreedomStudio/kernel/freedom-metal/metal/compiler.h \
- C\:/wsFreedomStudio/kernel/freedom-metal/metal/cpu.h \
- C\:/wsFreedomStudio/kernel/freedom-metal/metal/interrupt.h \
+src/hpm.o: \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/src/hpm.c \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/drivers/riscv_cpu.h \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/compiler.h \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/cpu.h \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/interrupt.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\lib\gcc\riscv64-unknown-elf\10.2.0\include\stddef.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\lib\gcc\riscv64-unknown-elf\10.2.0\include\stdint.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\stdint.h \
@@ -11,11 +12,11 @@ src/hpm.o: C\:/wsFreedomStudio/kernel/freedom-metal/src/hpm.c \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\_newlib_version.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_intsup.h \
  c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_stdint.h \
- C\:/wsFreedomStudio/kernel/freedom-metal/metal/hpm.h
-C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/riscv_cpu.h:
-C\:/wsFreedomStudio/kernel/freedom-metal/metal/compiler.h:
-C\:/wsFreedomStudio/kernel/freedom-metal/metal/cpu.h:
-C\:/wsFreedomStudio/kernel/freedom-metal/metal/interrupt.h:
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/hpm.h
+C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/drivers/riscv_cpu.h:
+C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/compiler.h:
+C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/cpu.h:
+C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/interrupt.h:
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\lib\gcc\riscv64-unknown-elf\10.2.0\include\stddef.h:
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\lib\gcc\riscv64-unknown-elf\10.2.0\include\stdint.h:
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\stdint.h:
@@ -24,4 +25,4 @@ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\_newlib_version.h:
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_intsup.h:
 c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_stdint.h:
-C\:/wsFreedomStudio/kernel/freedom-metal/metal/hpm.h:
+C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/hpm.h:

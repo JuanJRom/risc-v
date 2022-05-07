@@ -1,3 +1,4 @@
-src/init.o: C\:/wsFreedomStudio/kernel/freedom-metal/src/init.c \
- C\:/wsFreedomStudio/kernel/freedom-metal/metal/init.h
-C\:/wsFreedomStudio/kernel/freedom-metal/metal/init.h:
+src/init.o: \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/src/init.c \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/init.h
+C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel/freedom-metal/metal/init.h:
