@@ -1,0 +1,29 @@
+/*
+ * semaphore.c
+ *
+ *  Created on: 25 mar. 2022
+ *      Author: jjrh
+ */
+
+#include "semaphore.h"
+
+void SemaphoreInit(int32_t *semaphore, int32_t value){
+	*semaphore = value;
+}
+
+void SemaphoreWait(semaphore_t *semaphore){
+	intr_off();
+	*semaphore -=1;
+	while(*semaphore <=0){
+
+	}
+	intr_on();
+}
+
+void SemaphoreSignal(semaphore_t *semaphore){
+	intr_off();
+	*semaphore +=1;
+	intr_on();
+}
+
+

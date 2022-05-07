@@ -1,0 +1,4 @@
+src/drivers/sifive_gpio-switches.o: \
+ C\:/wsFreedomStudio/kernel/freedom-metal/src/drivers/sifive_gpio-switches.c \
+ metal/machine/platform.h
+metal/machine/platform.h:

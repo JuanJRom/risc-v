@@ -1,0 +1,1 @@
+src/vector.o: C\:/wsFreedomStudio/kernel/freedom-metal/src/vector.S

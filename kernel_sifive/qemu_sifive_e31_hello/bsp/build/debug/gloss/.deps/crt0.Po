@@ -1,0 +1,2 @@
+gloss/crt0.o: \
+ C\:/wsFreedomStudio/qemu_sifive_e31_hello/freedom-metal/gloss/crt0.S

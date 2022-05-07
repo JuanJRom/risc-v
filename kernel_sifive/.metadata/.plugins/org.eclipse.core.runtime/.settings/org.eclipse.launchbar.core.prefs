@@ -1,0 +1,14 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:spike_test,org.eclipse.launchbar.core.descriptorType.default\:hello,org.eclipse.launchbar.core.descriptorType.default\:qemu_sifive_e31_hello (1),org.eclipse.launchbar.core.descriptorType.default\:qemu timer_interrupt,org.eclipse.launchbar.core.descriptorType.default\:spike_hello,org.eclipse.launchbar.core.descriptorType.default\:spike_hello (1),org.eclipse.launchbar.core.descriptorType.default\:qemu sifive_hifive1_revb_hello,org.eclipse.launchbar.core.descriptorType.default\:sifive_hifive1_revb_hello,org.eclipse.launchbar.core.descriptorType.default\:qemu_sifive_e31_hello,org.eclipse.launchbar.core.descriptorType.default\:qemu qemu_sifive_e31_hello,org.eclipse.launchbar.core.descriptorType.default\:qemu qemu_sifive_e31_timer_interrupt,org.eclipse.launchbar.core.descriptorType.default\:qemu qemu_sifive_e31_plic_interrupts,org.eclipse.launchbar.core.descriptorType.default\:kernel_sifive_semaphore,org.eclipse.launchbar.core.descriptorType.default\:kernel_sifive_semaphore debug,org.eclipse.launchbar.core.descriptorType.default\:qemu kernel,org.eclipse.launchbar.core.descriptorType.default\:kernel_1 debug,org.eclipse.launchbar.core.descriptorType.default\:kernel_list debug
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:hello/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:hello/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:kernel_list\ debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:kernel_sifive_semaphore\ debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:qemu\ kernel/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:qemu\ qemu_sifive_e31_hello/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:qemu_sifive_e31_hello/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:spike_test/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:spike_test/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

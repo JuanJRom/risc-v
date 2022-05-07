@@ -1,0 +1,1 @@
+src/trap.o: C\:/wsFreedomStudio/kernel/freedom-metal/src/trap.S

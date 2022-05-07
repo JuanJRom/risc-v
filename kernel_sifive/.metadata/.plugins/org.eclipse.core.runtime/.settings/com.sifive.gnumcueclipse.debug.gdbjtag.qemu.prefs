@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+gdb.client.commands=
+gdb.client.executable=${qemu_gdbclient}
+gdb.client.other=
+gdb.qemu.doDebugInRam=false
+gdb.qemu.doInitialReset=false
+gdb.qemu.doPreRunReset=true
+gdb.qemu.init.other=
+gdb.qemu.preRun.other=
+gdb.server.doStart=true
+gdb.server.executable=${qemu_gdbserver}
+gdb.server.other=-d unimp,guest_errors -readconfig bsp\\qemu.cfg

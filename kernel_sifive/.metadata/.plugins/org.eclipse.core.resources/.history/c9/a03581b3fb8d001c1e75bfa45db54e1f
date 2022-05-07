@@ -1,0 +1,29 @@
+/* Juan Jose Romero Hernandez */
+/* Diseño de kernel sobre arquitectura risc-v*/
+
+#include "kernel.h"
+#include <stdio.h>
+
+int count = 0, count1= 0;
+
+void task(void){
+	while(1){
+		count++;
+		//printf("task: %d\n", count);
+		//asm volatile("wfi");
+	}
+}
+
+void task1(void){
+	while(1){
+		count1++;
+		//printf("task1: %d\n", count1);
+	}
+}
+
+int main() {
+	printf("RISC-V Kernel\n");
+	osKernelAddThreads(&task, &task1);
+	osKernelLaunch();
+}
+

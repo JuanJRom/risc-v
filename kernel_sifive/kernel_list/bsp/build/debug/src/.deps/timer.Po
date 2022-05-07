@@ -1,0 +1,144 @@
+src/timer.o: C\:/wsFreedomStudio/kernel/freedom-metal/src/timer.c \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/cpu.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/interrupt.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\lib\gcc\riscv64-unknown-elf\10.2.0\include\stddef.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\lib\gcc\riscv64-unknown-elf\10.2.0\include\stdint.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\stdint.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\_default_types.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\features.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\_newlib_version.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_intsup.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_stdint.h \
+ metal/machine.h metal/machine/platform.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/fixed-clock.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/clock.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/compiler.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/memory.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/riscv_clint0.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/riscv_cpu.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/riscv_plic0.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/pmp.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_local-external-interrupts0.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_gpio0.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/gpio.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_gpio-leds.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/led.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_pwm0.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/pwm.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_rtc0.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/io.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/rtc.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_spi0.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/spi.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_test0.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/shutdown.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_uart0.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/uart.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_wdog0.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/watchdog.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_fe310-g000_hfrosc.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_fe310-g000_prci.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_fe310-g000_hfxosc.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_fe310-g000_lfrosc.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_fe310-g000_pll.h \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/timer.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\time.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\_ansi.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\newlib-nano\newlib.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\config.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\ieeefp.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\cdefs.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_timeval.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_types.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\_types.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\types.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\endian.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\_endian.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\select.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_sigset.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\timespec.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_timespec.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_pthreadtypes.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\sched.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\types.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\time.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\_ansi.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\reent.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\lock.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\assert.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\time.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_locale.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\_time.h \
+ c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\times.h
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/cpu.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/interrupt.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\lib\gcc\riscv64-unknown-elf\10.2.0\include\stddef.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\lib\gcc\riscv64-unknown-elf\10.2.0\include\stdint.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\stdint.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\_default_types.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\features.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\_newlib_version.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_intsup.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_stdint.h:
+metal/machine.h:
+metal/machine/platform.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/fixed-clock.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/clock.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/compiler.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/memory.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/riscv_clint0.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/riscv_cpu.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/riscv_plic0.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/pmp.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_local-external-interrupts0.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_gpio0.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/gpio.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_gpio-leds.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/led.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_pwm0.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/pwm.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_rtc0.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/io.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/rtc.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_spi0.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/spi.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_test0.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/shutdown.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_uart0.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/uart.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_wdog0.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/watchdog.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_fe310-g000_hfrosc.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_fe310-g000_prci.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_fe310-g000_hfxosc.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_fe310-g000_lfrosc.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/drivers/sifive_fe310-g000_pll.h:
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/timer.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\time.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\_ansi.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\newlib-nano\newlib.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\config.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\ieeefp.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\cdefs.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_timeval.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_types.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\_types.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\types.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\endian.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\_endian.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\select.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_sigset.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\timespec.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_timespec.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_pthreadtypes.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\sched.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\types.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\time.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\_ansi.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\reent.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\lock.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\assert.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\time.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\_locale.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\machine\_time.h:
+c\:\freedomstudio\sifive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\riscv64-unknown-elf\include\sys\times.h:

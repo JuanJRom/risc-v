@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;qemu_sifive_e31_hello/src/kernel.s&apos; to &apos;kernel.S&apos;" description="Rename resource &apos;kernel.s&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/kernel.s" name="kernel.S" stamp="1643350182558" updateReferences="true"/>
+</session>

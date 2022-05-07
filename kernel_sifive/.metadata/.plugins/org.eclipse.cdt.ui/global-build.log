@@ -1,0 +1,32 @@
+19:43:35 **** Incremental Build of configuration debug for project kernel_list ****
+make all CONFIGURATION=debug 
+which: no freedom-metal_header-generator in (/c/FreedomStudio/SiFive/sdk-utilities-1.0.1-2020.12.1:/usr/bin:/c/FreedomStudio/SiFive/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8/bin:/c/FreedomStudio/jre/bin/server:/c/FreedomStudio/jre/bin:/c/Program Files/Common Files/Oracle/Java/javapath:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files/Git/cmd:/c/MinGW/bin:/c/Program Files/PuTTY:/c/Program Files/Docker/Docker/resources/bin:/c/ProgramData/DockerDesktop/version-bin:/c/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility:/c/Program Files/Java/jdk-18/bin:/c/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn:/c/Program Files/Azure Data Studio/bin:/c/Users/jjrh/AppData/Local/Microsoft/WindowsApps:/c/Users/jjrh/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/jjrh/AppData/Local/Programs/MiKTeX/miktex/bin/x64:/c/Program Files/Azure Data Studio/bin:/c/FreedomStudio)
+mkdir -p /c/wsFreedomStudio/kernel_list/src/debug/
+/usr/bin/make -C /c/wsFreedomStudio/kernel_list/src empty \
+	PORT_DIR= \
+	PROGRAM=empty \
+	AR=riscv64-unknown-elf-ar \
+	CC=riscv64-unknown-elf-gcc \
+	CXX=riscv64-unknown-elf-g++ \
+	ASFLAGS="-march=rv32imac -mabi=ilp32 -mcmodel=medlow --specs=nano.specs -O0 -g" \
+	CCASFLAGS="-march=rv32imac -mabi=ilp32 -mcmodel=medlow -I/c/wsFreedomStudio/kernel_list/bsp/install/include --specs=nano.specs" \
+	CFLAGS="-march=rv32imac -mabi=ilp32 -mcmodel=medlow -ffunction-sections -fdata-sections -I/c/wsFreedomStudio/kernel_list/bsp/install/include --specs=nano.specs -DMTIME_RATE_HZ_DEF=10000000 -fcommon -O0 -g" \
+	CXXFLAGS="-march=rv32imac -mabi=ilp32 -mcmodel=medlow -ffunction-sections -fdata-sections -I/c/wsFreedomStudio/kernel_list/bsp/install/include --specs=nano.specs -DMTIME_RATE_HZ_DEF=10000000 -O0 -g" \
+	XCFLAGS="-DMETAL_WAIT_CYCLE=0" \
+	LDFLAGS="-Wl,--gc-sections -Wl,-Map,empty.map -nostartfiles -nostdlib -L/c/wsFreedomStudio/kernel_list/bsp/install/lib/debug/ -T/c/wsFreedomStudio/kernel_list/bsp/metal.default.lds" \
+	LDLIBS="-Wl,--start-group -lc -lgcc -lm -lmetal -lmetal-gloss -Wl,--end-group" \
+	FREERTOS_METAL_VENV_PATH="/c/wsFreedomStudio/kernel_list/venv"
+make[1]: Entering directory '/c/wsFreedomStudio/kernel_list/src'
+riscv64-unknown-elf-gcc -march=rv32imac -mabi=ilp32 -mcmodel=medlow -ffunction-sections -fdata-sections -I/c/wsFreedomStudio/kernel_list/bsp/install/include --specs=nano.specs -DMTIME_RATE_HZ_DEF=10000000 -fcommon -O0 -g -Wl,--gc-sections -Wl,-Map,empty.map -nostartfiles -nostdlib -L/c/wsFreedomStudio/kernel_list/bsp/install/lib/debug/ -T/c/wsFreedomStudio/kernel_list/bsp/metal.default.lds kernel.c main.c list.c trap.c semaphore.c kernel.S  -Wl,--start-group -lc -lgcc -lm -lmetal -lmetal-gloss -Wl,--end-group -o empty
+make[1]: Leaving directory '/c/wsFreedomStudio/kernel_list/src'
+mv /c/wsFreedomStudio/kernel_list/src/empty /c/wsFreedomStudio/kernel_list/src/debug/empty.elf
+mv /c/wsFreedomStudio/kernel_list/src/empty.map /c/wsFreedomStudio/kernel_list/src/debug/
+touch -c /c/wsFreedomStudio/kernel_list/src/debug/empty.elf
+riscv64-unknown-elf-objdump --source --all-headers --demangle --line-numbers --wide /c/wsFreedomStudio/kernel_list/src/debug/empty.elf > /c/wsFreedomStudio/kernel_list/src/debug/empty.lst
+riscv64-unknown-elf-size /c/wsFreedomStudio/kernel_list/src/debug/empty.elf
+   text	   data	    bss	    dec	    hex	filename
+  30020	   2004	   6464	  38488	   9658	C:/wsFreedomStudio/kernel_list/src/debug/empty.elf
+riscv64-unknown-elf-objcopy -O ihex /c/wsFreedomStudio/kernel_list/src/debug/empty.elf /c/wsFreedomStudio/kernel_list/src/debug/empty.hex
+19:43:43 **** Incremental Build of configuration debug for project kernel_list ****
+make all CONFIGURATION=debug 
+which: no freedom-metal_header-generator in (/c/FreedomStudio/SiFive/sdk-utilities-1.0.1-2020.12.1:/usr/bin:/c/FreedomStudio/SiFive/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8/bin:/c/FreedomStudio/jre/bin/server:/c/FreedomStudio/jre/bin:/c/Program Files/Common Files/Oracle/Java/javapath:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files/Git/cmd:/c/MinGW/bin:/c/Program Files/PuTTY:/c/Program Files/Docker/Docker/resources/bin:/c/ProgramData/DockerDesktop/version-bin:/c/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility:/c/Program Files/Java/jdk-18/bin:/c/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn:/c/Program Files/Azure Data Studio/bin:/c/Users/jjrh/AppData/Local/Microsoft/WindowsApps:/c/Users/jjrh/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/jjrh/AppData/Local/Programs/MiKTeX/miktex/bin/x64:/c/Program Files/Azure Data Studio/bin:/c/FreedomStudio)

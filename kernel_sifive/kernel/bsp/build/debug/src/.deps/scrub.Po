@@ -1,0 +1,1 @@
+src/scrub.o: C\:/wsFreedomStudio/kernel/freedom-metal/src/scrub.S

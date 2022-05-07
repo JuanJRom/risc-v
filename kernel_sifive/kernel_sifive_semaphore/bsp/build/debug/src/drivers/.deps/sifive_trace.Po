@@ -1,0 +1,4 @@
+src/drivers/sifive_trace.o: \
+ C\:/wsFreedomStudio/kernel/freedom-metal/src/drivers/sifive_trace.c \
+ metal/machine/platform.h
+metal/machine/platform.h:

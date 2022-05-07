@@ -1,0 +1,3 @@
+src/init.o: C\:/wsFreedomStudio/kernel/freedom-metal/src/init.c \
+ C\:/wsFreedomStudio/kernel/freedom-metal/metal/init.h
+C\:/wsFreedomStudio/kernel/freedom-metal/metal/init.h:
