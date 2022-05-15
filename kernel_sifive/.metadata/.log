@@ -1,424 +1,123 @@
-!SESSION 2022-05-07 14:59:09.248 -----------------------------------------------
+!SESSION 2022-05-14 10:09:42.265 -----------------------------------------------
 eclipse.buildId=unknown
 java.version=15.0.1
 java.vendor=AdoptOpenJDK
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-!ENTRY org.eclipse.egit.ui 2 0 2022-05-07 15:00:38.178
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\jjrh'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+This is a continuation of log file C:\Users\jjrh\Dropbox\Telecom\Tesis\Source\kernel_sifive\.metadata\.bak_0.log
+Created Time: 2022-05-14 11:38:17.642
 
-!ENTRY org.eclipse.cdt.core 1 0 2022-05-07 15:01:46.616
-!MESSAGE Indexed 'kernel' (62 sources, 147 headers) in 2.92 sec: 6,620 declarations; 12,107 references; 0 unresolved inclusions; 6 syntax errors; 185 unresolved names (0.98 %)
-!SESSION 2022-05-07 15:05:21.766 -----------------------------------------------
-eclipse.buildId=unknown
-java.version=15.0.1
-java.vendor=AdoptOpenJDK
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-05-07 15:05:38.963
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\jjrh'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.qemu 4 1 2022-05-07 15:06:36.960
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.qemu 4 1 2022-05-07 15:06:37.216
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 15:06:38.662
-!MESSAGE Breakpoint already removed
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2022-05-07 15:06:38.663
-!MESSAGE Breakpoint already removed
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 15:07:44.738
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@668ea2bf): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Context cannot be suspended. null' resulted in an error.
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-07 15:07:44.738
-!MESSAGE Context cannot be suspended.
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-05-07 15:46:15.942
-!MESSAGE Indexed 'kernel_semaphore' (62 sources, 147 headers) in 1.54 sec: 6,604 declarations; 12,081 references; 0 unresolved inclusions; 6 syntax errors; 185 unresolved names (0.98 %)
-
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2022-05-07 15:47:02.227
-!MESSAGE Error running Builtin Specs Detector
-!STACK 1
-org.eclipse.core.runtime.CoreException: Error running Builtin Specs Detector
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:735)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:592)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:518)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: org.eclipse.core.internal.resources.ResourceException: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1177)
-	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:163)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:719)
-	... 4 more
-Caused by: java.lang.Exception: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	... 9 more
-!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 0 2022-05-07 15:47:02.228
-!MESSAGE Error running Builtin Specs Detector
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException(/qemu_sifive_e31_hello)[372]: java.lang.Exception: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1177)
-	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:163)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:719)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:592)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:518)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SUBENTRY 2 org.eclipse.core.resources 4 372 2022-05-07 15:47:02.228
-!MESSAGE Project 'qemu_sifive_e31_hello' is not open.
-!STACK 0
-java.lang.Exception: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1177)
-	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:163)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:719)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:592)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:518)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2022-05-07 15:47:02.230
-!MESSAGE Error running Builtin Specs Detector
-!STACK 1
-org.eclipse.core.runtime.CoreException: Error running Builtin Specs Detector
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:735)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:592)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:518)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: org.eclipse.core.internal.resources.ResourceException: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1177)
-	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:163)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:719)
-	... 4 more
-Caused by: java.lang.Exception: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	... 9 more
-!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 0 2022-05-07 15:47:02.230
-!MESSAGE Error running Builtin Specs Detector
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException(/qemu_sifive_e31_hello)[372]: java.lang.Exception: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1177)
-	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:163)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:719)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:592)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:518)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SUBENTRY 2 org.eclipse.core.resources 4 372 2022-05-07 15:47:02.230
-!MESSAGE Project 'qemu_sifive_e31_hello' is not open.
-!STACK 0
-java.lang.Exception: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1177)
-	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:163)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:719)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:592)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:518)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2022-05-07 15:47:02.231
-!MESSAGE Error running Builtin Specs Detector
-!STACK 1
-org.eclipse.core.runtime.CoreException: Error running Builtin Specs Detector
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:735)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:592)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:518)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: org.eclipse.core.internal.resources.ResourceException: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1177)
-	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:163)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:719)
-	... 4 more
-Caused by: java.lang.Exception: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	... 9 more
-!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 0 2022-05-07 15:47:02.231
-!MESSAGE Error running Builtin Specs Detector
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException(/qemu_sifive_e31_hello)[372]: java.lang.Exception: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1177)
-	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:163)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:719)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:592)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:518)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SUBENTRY 2 org.eclipse.core.resources 4 372 2022-05-07 15:47:02.231
-!MESSAGE Project 'qemu_sifive_e31_hello' is not open.
-!STACK 0
-java.lang.Exception: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1177)
-	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:163)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:719)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:592)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:518)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2022-05-07 15:47:02.231
-!MESSAGE Error running Builtin Specs Detector
-!STACK 1
-org.eclipse.core.runtime.CoreException: Error running Builtin Specs Detector
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:735)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:592)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:518)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: org.eclipse.core.internal.resources.ResourceException: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1177)
-	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:163)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:719)
-	... 4 more
-Caused by: java.lang.Exception: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	... 9 more
-!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 0 2022-05-07 15:47:02.231
-!MESSAGE Error running Builtin Specs Detector
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException(/qemu_sifive_e31_hello)[372]: java.lang.Exception: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1177)
-	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:163)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:719)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:592)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:518)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SUBENTRY 2 org.eclipse.core.resources 4 372 2022-05-07 15:47:02.231
-!MESSAGE Project 'qemu_sifive_e31_hello' is not open.
-!STACK 0
-java.lang.Exception: Project 'qemu_sifive_e31_hello' is not open.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1177)
-	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:163)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:719)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:592)
-	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:518)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-05-07 15:47:43.974
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-05-07 15:47:44.088
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 15:47:44.627
-!MESSAGE Breakpoint already removed
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2022-05-07 15:47:44.627
-!MESSAGE Breakpoint already removed
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag 4 0 2022-05-07 15:49:56.146
-!MESSAGE Debug session 'kernel_list debug' already started. Terminate the first one before restarting.
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:09:20.632
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:09:20.723
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 16:09:21.306
-!MESSAGE Breakpoint already removed
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2022-05-07 16:09:21.306
-!MESSAGE Breakpoint already removed
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:10:22.893
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:10:22.993
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 10001 2022-05-07 16:10:35.658
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-14 11:38:17.642
+!MESSAGE Request for monitor: 'RequestMonitor (com.sifive.freedomstudio.state.ui.StateDebugTarget$3$1@669590b6): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-14 11:38:17.642
 !MESSAGE Connection is shut down
 
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:10:44.115
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-14 11:38:17.643
+!MESSAGE Request for monitor: 'RequestMonitor (com.sifive.freedomstudio.state.ui.StateDebugTarget$3$1@4f4990af): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-14 11:38:17.643
+!MESSAGE Connection is shut down
 
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:10:44.214
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-14 11:38:17.644
+!MESSAGE Request for monitor: 'RequestMonitor (com.sifive.freedomstudio.state.ui.StateDebugTarget$3$1@69aa7595): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-14 11:38:17.644
+!MESSAGE Connection is shut down
 
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 16:10:44.821
-!MESSAGE Breakpoint already removed
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2022-05-07 16:10:44.821
-!MESSAGE Breakpoint already removed
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-14 11:38:17.644
+!MESSAGE Request for monitor: 'RequestMonitor (com.sifive.freedomstudio.state.ui.StateDebugTarget$3$1@78633624): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-14 11:38:17.644
+!MESSAGE Connection is shut down
 
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 16:18:53.651
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@624aa351): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Context cannot be suspended. null' resulted in an error.
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-07 16:18:53.651
-!MESSAGE Context cannot be suspended.
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-14 11:38:17.645
+!MESSAGE Request for monitor: 'RequestMonitor (com.sifive.freedomstudio.state.ui.StateDebugTarget$3$1@323909be): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-14 11:38:17.645
+!MESSAGE Connection is shut down
 
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:19:11.224
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-14 11:38:17.645
+!MESSAGE Request for monitor: 'RequestMonitor (com.sifive.freedomstudio.state.ui.StateDebugTarget$3$1@31762bbe): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-14 11:38:17.645
+!MESSAGE Connection is shut down
 
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:19:11.316
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-14 11:38:17.646
+!MESSAGE Request for monitor: 'RequestMonitor (com.sifive.freedomstudio.state.ui.StateDebugTarget$3$1@b4ae6d8): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-14 11:38:17.646
+!MESSAGE Connection is shut down
 
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 16:19:11.975
-!MESSAGE Breakpoint already removed
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2022-05-07 16:19:11.975
-!MESSAGE Breakpoint already removed
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-14 11:38:17.646
+!MESSAGE Request for monitor: 'RequestMonitor (com.sifive.freedomstudio.state.ui.StateDebugTarget$3$1@6af93383): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-14 11:38:17.646
+!MESSAGE Connection is shut down
 
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:20:36.492
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-14 11:38:17.647
+!MESSAGE Request for monitor: 'RequestMonitor (com.sifive.freedomstudio.state.ui.StateDebugTarget$3$1@1077a39b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-14 11:38:17.647
+!MESSAGE Connection is shut down
 
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:20:36.593
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-14 11:38:17.648
+!MESSAGE Request for monitor: 'RequestMonitor (com.sifive.freedomstudio.state.ui.StateDebugTarget$3$1@105c51f0): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-14 11:38:17.648
+!MESSAGE Connection is shut down
 
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 16:20:38.296
-!MESSAGE Breakpoint already removed
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2022-05-07 16:20:38.296
-!MESSAGE Breakpoint already removed
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:34:44.025
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:34:44.122
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 16:34:44.813
-!MESSAGE Breakpoint already removed
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2022-05-07 16:34:44.813
-!MESSAGE Breakpoint already removed
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:36:19.017
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:36:19.112
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 16:36:19.673
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIBreakpointsSynchronizer$2@510fbec4): Status ERROR: org.eclipse.cdt.dsf code=10004  null children=[Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Unknown breakpoint null]' resulted in an error.
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2022-05-07 16:36:19.674
-!MESSAGE Unknown breakpoint
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:40:30.651
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:40:30.751
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:47:33.953
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:47:34.056
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 16:47:35.631
-!MESSAGE Breakpoint already removed
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2022-05-07 16:47:35.631
-!MESSAGE Breakpoint already removed
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:51:28.221
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 16:51:28.317
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
-
-!ENTRY org.eclipse.cdt.dsf 4 10001 2022-05-07 16:51:28.930
-!MESSAGE Target not available.
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 16:51:28.938
-!MESSAGE Breakpoint already removed
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2022-05-07 16:51:28.938
-!MESSAGE Breakpoint already removed
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 17:01:10.561
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-05-07 17:01:10.653
-!MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 17:01:11.311
-!MESSAGE Breakpoint already removed
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2022-05-07 17:01:11.311
-!MESSAGE Breakpoint already removed
-!SESSION 2022-05-07 17:09:10.523 -----------------------------------------------
+!ENTRY org.eclipse.cdt.dsf.gdb 4 10001 2022-05-14 11:38:17.648
+!MESSAGE Connection is shut down
+!SESSION 2022-05-14 15:38:51.998 -----------------------------------------------
 eclipse.buildId=unknown
 java.version=15.0.1
 java.vendor=AdoptOpenJDK
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-!ENTRY org.eclipse.egit.ui 2 0 2022-05-07 17:09:26.533
+!ENTRY org.eclipse.egit.ui 2 0 2022-05-14 15:39:07.733
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\jjrh'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
-!ENTRY org.eclipse.cdt.core 1 0 2022-05-07 17:19:59.249
-!MESSAGE Indexed 'kernel_list_semaphore' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+!ENTRY org.eclipse.ui 4 0 2022-05-14 15:54:35.229
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4875)
+	at org.eclipse.swt.SWT.error(SWT.java:4790)
+	at org.eclipse.swt.SWT.error(SWT.java:4761)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:432)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:351)
+	at org.eclipse.swt.widgets.Text.getText(Text.java:1436)
+	at com.sifive.gnumcueclipse.debug.gdbjtag.qemu.ui.TabStartup$27$1.run(TabStartup.java:779)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 
-!ENTRY org.eclipse.cdt.core 1 0 2022-05-07 17:20:09.638
-!MESSAGE Indexed 'kernel_list_semaphore' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-05-07 17:20:09.860
-!MESSAGE Indexed 'kernel_list_semaphore' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
-
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.qemu 4 1 2022-05-07 17:21:49.482
+!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.qemu 4 1 2022-05-14 15:54:37.048
 !MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv-qemu-5.1.0-2020.08.1\bin\qemu-system-riscv32.exe -gdb tcp::1234 -monitor tcp::5432,server,nowait -d unimp,guest_errors -readconfig bsp\qemu.cfg -nographic -version -S
 
-!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.qemu 4 1 2022-05-07 17:21:49.598
+!ENTRY com.sifive.gnumcueclipse.debug.gdbjtag.qemu 4 1 2022-05-14 15:54:37.409
 !MESSAGE C:\FreedomStudio-4.18.0\SiFive\riscv64-unknown-elf-toolchain-10.2.0-2020.12.8\bin\riscv64-unknown-elf-gdb.exe --interpreter=mi2 --nx
 
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-07 17:21:50.881
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIBreakpointsSynchronizer$2@7f6405b2): Status ERROR: org.eclipse.cdt.dsf code=10004  null children=[Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Unknown breakpoint null]' resulted in an error.
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2022-05-07 17:21:50.881
-!MESSAGE Unknown breakpoint
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-05-07 17:32:14.175
-!MESSAGE Indexed 'qemu_sifive_e31_hello' (59 sources, 145 headers) in 1.08 sec: 6,516 declarations; 11,850 references; 0 unresolved inclusions; 6 syntax errors; 185 unresolved names (1 %)
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-05-14 15:57:54.652
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@726a12fb): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Context cannot be suspended. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-05-14 15:57:54.652
+!MESSAGE Context cannot be suspended.

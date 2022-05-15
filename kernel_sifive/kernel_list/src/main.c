@@ -8,7 +8,11 @@
 #include "list.h"
 #include "task.h"
 
+
+
 int main() {
+	semaphore_init(&semaphore, 1);
+	printf("RISC-V Kernel\n");
 	task_create(&task);
 	kernel_launch();
 	//asm volatile("wfi");

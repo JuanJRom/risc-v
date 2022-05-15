@@ -9,25 +9,32 @@
 
 extern void switch_to(void);
 
-void SemaphoreInit(semaphore_t *semaphore, int32_t value){
+void semaphore_init(semaphore_t *semaphore, int32_t value){
 	semaphore->value = value;
 }
 
-void SemaphoreWait(semaphore_t *semaphore){
+void semaphore_wait(semaphore_t *semaphore){
+	asm volatile("ecall");
 	intr_off();
-	semaphore->value -=1;
-	while(semaphore < 0){
-		semaphore->list = deleteFirst();  //Is necessary check it
-		semaphore->list->Current_state = waiting;
-		//here in missing add to waiting list
+	if(semaphore->value > 1000)
+		semaphore->value = 1;
+	semaphore->value--;
+	//printf("test_wait: %d\n", semaphore->value);
+	if(semaphore->value < 0){
+		task_wait(semaphore->queue);
 		switch_to();
 	}
 	intr_on();
 }
 
-void SemaphoreSignal(semaphore_t *semaphore){
+void semaphore_signal(semaphore_t *semaphore){
 	intr_off();
-	semaphore->value +=1;
+	semaphore->value ++;
+	//printf("test_signal: %d\n", semaphore->value);
+	if(semaphore->value <= 0){
+		task_unlock();
+		switch_to();
+	}
 	intr_on();
 }
 

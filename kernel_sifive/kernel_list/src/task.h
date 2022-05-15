@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include "kernel.h"
 
+semaphore_t semaphore;
+
 void task(void);
 void task1(void);
 void task2(void);

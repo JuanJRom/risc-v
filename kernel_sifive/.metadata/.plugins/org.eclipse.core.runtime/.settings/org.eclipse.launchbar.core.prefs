@@ -2,9 +2,11 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:kernel debug,org.eclipse.launchbar.core.descriptorType.default\:kernel_list debug,org.eclipse.launchbar.core.descriptorType.default\:qemu kernel_list_semaphore
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:kernel debug,org.eclipse.launchbar.core.descriptorType.default\:qemu kernel_list_semaphore,org.eclipse.launchbar.core.descriptorType.default\:sifive_hifive1_revb_hello,org.eclipse.launchbar.core.descriptorType.default\:red-v-blinky,org.eclipse.launchbar.core.descriptorType.default\:kernel_list debug
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:New_configuration/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:New_configuration/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:kernel\ debug/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:kernel\ debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:red-v-blinky/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:sifive_hifive1_revb_hello/activeLaunchMode=debug

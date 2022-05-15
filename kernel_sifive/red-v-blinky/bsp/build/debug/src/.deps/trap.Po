@@ -1,0 +1,2 @@
+src/trap.o: \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/red-v-blinky/freedom-metal/src/trap.S

@@ -1,2 +1,1 @@
-# empty
-An empty example. Use as a starting point for your own project!
+This project is like the kernel of the ARM course

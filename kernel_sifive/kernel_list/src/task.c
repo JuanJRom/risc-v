@@ -8,7 +8,6 @@
 #include "task.h"
 
 int32_t count = 0, count1= 0, count2= 0, count3= 0;
-//uint32_t semaphore1, semaphore2;
 
 void task(void){
 	while(1){
@@ -16,9 +15,6 @@ void task(void){
 		task_create(&task1);
 		task_create(&task2);
 		task_create(&task3);
-		//SemaphoreInit(&semaphore1, 1);
-		//SemaphoreInit(&semaphore2, 0);
-		printf("RISC-V Kernel\n");
 		printList();
 		task_end();
 		asm volatile("wfi");
@@ -39,18 +35,20 @@ void task1(void){
 
 void task2(void){
 	while(1){
-		//SemaphoreWait(&semaphore2);
+		//semaphore_wait(&semaphore);
 		count2++;
+		//printf("This is a server\n");
 		//printf("task 2 counter: %d\n", count2);
-		//SemaphoreSignal(&semaphore1);
+	//	semaphore_signal(&semaphore);
 	}
 }
 
 void task3(void){
 	while(1){
-		//SemaphoreWait(&semaphore1);
+		//semaphore_wait(&semaphore);
 		count3++;
+		//printf("This is a client\n");
 		//printf("task 3 counter: %d\n", count3);
-		//SemaphoreSignal(&semaphore2);
+		//semaphore_signal(&semaphore);
 	}
 }
