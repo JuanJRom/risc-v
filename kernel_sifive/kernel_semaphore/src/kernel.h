@@ -23,6 +23,7 @@ uint32_t osKernelAddThreads(void(*task0)(void),
 void timer_init(void);
 void system_init(void);
 void osSchedulerRoundRobin(void);
+void delay(int number_of_microseconds);
 
 
 #endif /* KERNEL_H */

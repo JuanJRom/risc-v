@@ -1,189 +1,182 @@
 /*
- * list.c
+ * list_1.c
  *
- *  Created on: 8 mar. 2022
+ *  Created on: 21 may. 2022
  *      Author: jjrh
  */
-
 #include "list.h"
 
-struct pcb *head = NULL;
-struct pcb *current = NULL;
+list_t* createList(list_t* list){
+    list = (list_t*) malloc(sizeof(list_t));
+    list->head = NULL;
+    return list;
+}
 
-//display the list
-void printList() {
-   struct pcb *ptr = head;
-   printf("\n[ ");
+void destroyList(list_t* list){
+    free(list);
+}
 
-   //start from the beginning
-   while(ptr != NULL) {
-      printf("(ID: %d, State: %d) ", ptr->id ,ptr->Current_state);
-      ptr = ptr->nextPt;
+node_t* createNode(){
+    node_t* node = (node_t*) malloc(sizeof(node_t));
+    node->stackPt =0;
+    node->next = NULL;
+    node->id = 0;
+    node->state = 0;
+    return node;
+}
+
+void destroyNode(node_t* node){
+    free(node);
+}
+
+void addFirst(list_t* list, node_t* node_1){
+    node_t* node = createNode();
+    node->id = node_1->id;
+	node->stackPt = node_1->stackPt;
+	node->state = node_1->state;
+    node->next = list->head;
+    list->head = node;
+}
+
+void addLast(list_t* list, node_t* node_1){
+    node_t* node = createNode();
+    node->id = node_1->id;
+    node->stackPt = node_1->stackPt;
+    node->state = node_1->state;
+    if(list->head == NULL){
+        node->next = list->head;
+        list->head = node;
+    }else{
+        node_t* temp_node = list->head;
+        while (temp_node->next != NULL){
+            temp_node = temp_node->next;
+        }
+        temp_node->next = node;
+    }
+}
+
+void addAfter(int n, list_t* list, node_t* node_1){
+    node_t* node = createNode();
+    node->id = node_1->id;
+    node->stackPt = node_1->stackPt;
+    node->state = node_1->state;
+    if(list->head == NULL){
+        node->next = list->head;
+        list->head = node;
+    }else{
+        node_t* temp_node = list->head;
+        int position = 0;
+        while (position < n && temp_node->next != NULL){
+            temp_node = temp_node->next;
+            position++;
+        }
+        node->next = temp_node->next;
+        temp_node->next = node;
+    }
+}
+
+node_t* get(int n, list_t* list){
+    if(list->head==NULL){
+        return NULL;
+    }else{
+        node_t* temp_node = list->head;
+        int position = 0;
+        while (position < n && temp_node->next != NULL){
+            temp_node = temp_node->next;
+            position++;
+        }
+        if(position !=n){
+            return NULL;
+        }else{
+            return temp_node;
+        }
+    }
+}
+
+int length(list_t* list){
+    int length = 0;
+    node_t* temp_node;
+    for(temp_node = list->head; temp_node != NULL; temp_node = temp_node->next){
+        length++;
+    }
+    return length;
+}
+
+int isEmpty(list_t* list){
+   return list->head == NULL;
+}
+
+void deleteFirst(list_t* list){
+    if(list->head != NULL){
+        node_t* temp_node = list->head;
+        list->head = list->head->next;
+        destroyNode(temp_node);
+    }
+}
+
+void deleteLast(list_t* list){
+    if(list->head != NULL){
+        if(list->head->next != NULL){
+            node_t* temp_node = list->head;
+            while(temp_node->next->next){
+                temp_node = temp_node->next;
+            }
+            node_t* node_delete = temp_node->next;
+            temp_node->next = NULL;
+            destroyNode(node_delete);
+        }else{
+            node_t* node_delete = list->head;
+            list->head = NULL;
+            destroyNode(node_delete);
+        }
+    }
+}
+
+void deleteElement(list_t* list,int id) {
+
+   node_t* current = list->head;
+   node_t* previous = NULL;
+
+   if(list->head == NULL) {
+      return;
    }
 
-   printf(" ]");
-}
-
-//insert link at the first location
-struct pcb* insertFirst(int id, int Current_state) {
-   //create a link
-   struct pcb *link = (struct pcb*) malloc(sizeof(struct pcb));
-
-   link->id = id;
-   link->Current_state = Current_state;
-
-   //point it to old first pcb
-   link->nextPt = head;
-
-   //point first to new first pcb
-   head = link;
-
-   return head;
-}
-
-//give the first pcb
-//struct pcb* giveFirst(void){
-//	struct pcb *tempLink = head;
-//	return tempLink;
-//}
-
-//delete first item
-struct pcb* deleteFirst() {
-
-   //save reference to first link
-   struct pcb *tempLink = head;
-
-   //mark next to first link as first
-   head = head->nextPt;
-
-   //return the deleted link
-   return tempLink;
-}
-
-//is list empty
-bool isEmpty() {
-   return head == NULL;
-}
-
-int length() {
-   int length = 0;
-   struct pcb *current;
-
-   for(current = head; current != NULL; current = current->nextPt) {
-      length++;
-   }
-
-   return length;
-}
-
-//find a link with given id
-struct pcb* find(int id) {
-
-   //start from the first link
-   struct pcb* current = head;
-
-   //if list is empty
-   if(head == NULL) {
-      return NULL;
-   }
-
-   //navigate through list
    while(current->id != id) {
-
-      //if it is last pcb
-      if(current->nextPt == NULL) {
-         return NULL;
+      if(current->next == NULL) {
+         return;
       } else {
-         //go to next link
-         current = current->nextPt;
-      }
-   }
-
-   //if Current_state found, return the current Link
-   return current;
-}
-
-//delete a link with given id
-struct pcb* delete(int id) {
-
-   //start from the first link
-   struct pcb* current = head;
-   struct pcb* previous = NULL;
-
-   //if list is empty
-   if(head == NULL) {
-      return NULL;
-   }
-
-   //navigate through list
-   while(current->id != id) {
-
-      //if it is last pcb
-      if(current->nextPt == NULL) {
-         return NULL;
-      } else {
-         //store reference to current link
          previous = current;
-         //move to next link
-         current = current->nextPt;
+         current = current->next;
       }
    }
 
-   //found a match, update the link
-   if(current == head) {
-      //change first to point to next link
-      head = head->nextPt;
+   if(current == list->head) {
+      list->head = list->head->next;
    } else {
-      //bypass the current link
-      previous->nextPt = current->nextPt;
-   }
-
-   return current;
-}
-/*
-void sort() {
-
-   int i, j, k, tempid, tempCurrent_state;
-   struct pcb *current;
-   struct pcb *nextPt;
-
-   int size = length();
-   k = size ;
-
-   for ( i = 0 ; i < size - 1 ; i++, k-- ) {
-      current = head;
-      nextPt = head->nextPt;
-
-      for ( j = 1 ; j < k ; j++ ) {
-
-         if ( current->Current_state > nextPt->Current_state ) {
-            tempCurrent_state = current->Current_state;
-            current->Current_state = nextPt->Current_state;
-            nextPt->Current_state = tempCurrent_state;
-
-            tempid = current->id;
-            current->id = nextPt->id;
-            nextPt->id = tempid;
-         }
-
-         current = current->nextPt;
-         nextPt = nextPt->nextPt;
-      }
+      previous->next = current->next;
    }
 }
 
-void reverse(struct pcb** head_ref) {
-   struct pcb* prev   = NULL;
-   struct pcb* current = *head_ref;
-   struct pcb* nextPt;
+node_t* find(list_t* list, int id){
+    node_t* temp_node = list->head;
+    if(list->head == NULL){
+        return NULL;
+    }
+    while (temp_node->id != id){
+        if(temp_node->next == NULL){
+            return NULL;
+        }else{
+            temp_node = temp_node->next;
+        }
+    }
+    return temp_node;
+}
 
-   while (current != NULL) {
-      nextPt  = current->nextPt;
-      current->nextPt = prev;
-      prev = current;
-      current = nextPt;
-   }
 
-   *head_ref = prev;
-}*/
-
+void printList(list_t* list) {
+    node_t* node = list->head;
+    while (node != NULL){
+        printf("ID: %d, State: %d, Stack address: %x \n", node->id, node->state, node->stackPt);
+        node = node->next;
+    }
+}

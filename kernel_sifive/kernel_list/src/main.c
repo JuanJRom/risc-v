@@ -1,20 +1,22 @@
-/* Juan Jose Romero Hernandez */
-/* Diseño de kernel sobre arquitectura risc-v*/
+/* Juan Jose Romero Hernandez
+   Diseño de kernel sobre arquitectura risc-v
+     */
 
-#include "kernel.h"
-#include "semaphore.h"
-#include "riscv.h"
+//#include "kernel.h"
 #include <stdio.h>
-#include "list.h"
 #include "task.h"
-
-
+#include "list.h"
 
 int main() {
-	semaphore_init(&semaphore, 1);
 	printf("RISC-V Kernel\n");
-	task_create(&task);
+    task_create(&task);
 	kernel_launch();
-	//asm volatile("wfi");
 }
 
+
+/*  Only for remember
+ *  asm volatile("wfi");
+ *  asm volatile("ecall");
+ *  task_create(&task1);
+ *  semaphore_init(&semaphore, 1);
+ */

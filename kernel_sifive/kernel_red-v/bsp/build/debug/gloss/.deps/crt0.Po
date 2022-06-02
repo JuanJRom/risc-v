@@ -1,0 +1,2 @@
+gloss/crt0.o: \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel_red-v/freedom-metal/gloss/crt0.S

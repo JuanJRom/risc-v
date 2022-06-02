@@ -1,0 +1,4 @@
+src/drivers/ucb_htif0.o: \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel_red-v/freedom-metal/src/drivers/ucb_htif0.c \
+ metal/machine/platform.h
+metal/machine/platform.h:

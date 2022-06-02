@@ -9,7 +9,7 @@
 #define SEMAPHORE_H
 
 void osSemaphoreInit(int32_t *semaphore, int32_t value);
-void osSignalSet(int32_t *semaphore);
-void osSignalWait(int32_t *semaphore);
+void semaphore_signal(int32_t *semaphore);
+void semaphore_wait(int32_t *semaphore);
 
 #endif /* SEMAPHORE_H */

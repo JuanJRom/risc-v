@@ -17,18 +17,22 @@
 #include "semaphore.h"
 
 
-struct pcb *temp_ptr;
-struct pcb *current_ptr;
+node_t* temp_pcb;
+node_t* current;
+list_t* readyList;
 
 void kernel_launch(void);
 
 int  task_create(void(*task)(void));
 void task_end();
-void task_wait(struct pcb *queue);
-void task_unlock();
+void task_wait(list_t* queue);
+void task_unlock(list_t* queue);
 
 void timer_init(void);
 void scheduler_RoundRobin(void);
+void process_details(node_t* pcb);
+
+void delay(int number_of_microseconds);
 
 
 #endif /* KERNEL_H */

@@ -1,4 +1,0 @@
-gloss/sys_exit.o: \
- C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel_list/freedom-metal/gloss/sys_exit.c \
- C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel_list/freedom-metal/metal/shutdown.h
-C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel_list/freedom-metal/metal/shutdown.h:

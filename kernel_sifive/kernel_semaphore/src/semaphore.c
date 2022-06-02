@@ -7,18 +7,19 @@
 
 #include "kernel.h"
 #include "riscv.h"
+#include "semaphore.h"
 
 void osSemaphoreInit(int32_t *semaphore, int32_t value){
 	*semaphore = value;
 }
 
-void osSignalSet(int32_t *semaphore){
+void semaphore_signal(int32_t *semaphore){
 	intr_off();
 	*semaphore +=1;
 	intr_on();
 }
 
-void osSignalWait(int32_t *semaphore){
+void semaphore_wait(int32_t *semaphore){
 	intr_off();
 	while(*semaphore <=0){
 		intr_off();

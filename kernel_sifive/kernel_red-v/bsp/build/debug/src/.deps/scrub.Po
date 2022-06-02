@@ -1,0 +1,2 @@
+src/scrub.o: \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel_red-v/freedom-metal/src/scrub.S

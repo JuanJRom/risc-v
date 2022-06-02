@@ -6,6 +6,8 @@
  */
 
 #include "trap.h"
+#include "list.h"
+#include "kernel.h"
 
 #define CLINT_BASE 0x2000000
 #define MTIME (volatile unsigned long long int *)(CLINT_BASE + 0xbff8)
@@ -13,9 +15,9 @@
 
 void handle_interrupt(uint32_t mcause) {
     if ((mcause << 1 >> 1) == 0x7) {
+    	//printList(readyList);
         //printf("  Switch context \n");
         *MTIMECMP = *MTIME + 0xfffff * 5;
-
     } else {
         printf("Unknown interrupt: %x\n ",mcause << 1 >> 1);
         while (1)

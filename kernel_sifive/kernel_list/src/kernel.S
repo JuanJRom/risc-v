@@ -1,13 +1,14 @@
 .section .text
 .global osSchedulerLaunch
 .type osSchedulerLaunch, @function
-.extern current_ptr
+.extern current
 osSchedulerLaunch:
-    lw t0, current_ptr   # Load currentPt into T0
+    lw t0, current   # Load currentPt into T0
     lw t1, (t0)
     lw sp, (t0)        # t1 = &t0
     lw ra, (sp)
     addi sp, sp, -132   # make a stack frame
+    sw sp, 4(sp)         # store sp
     ret
 
 .data
@@ -17,12 +18,15 @@ osSchedulerLaunch:
 .align 2
 switch_to:
 
-    call handle_trap
-    mv tp, sp
-    mv sp, fp
+    lw t6, current       # Load currentPt into T0
+    lw sp, (t6)
+    addi sp, sp, -132    # make a stack frame
+
+   # mv tp, sp
+   # mv sp, fp
     #Push register
     sw ra, (sp)
-    sw sp, 4(sp)
+    #sw sp, 4(sp)
     sw gp, 8(sp)
     sw tp, 12(sp)
     sw t0, 16(sp)
@@ -56,6 +60,7 @@ switch_to:
     csrr t0, mepc
     sw t0, 132(sp)
 
+    call handle_trap
     #Switch context in assembly language, but it has an bug
     #lw t0, currentPt   # Load currentPt into T0
     #addi t0, t0, 4     # currentPt.nextPt
@@ -70,12 +75,12 @@ switch_to:
 
     #Switch context in c
     call scheduler_RoundRobin
-    lw t0, current_ptr   # Load currentPt into T0
+    lw t0, current       # Load currentPt into T0
     lw sp, (t0)
     addi sp, sp, -132    # make a stack frame
+    sw sp, 4(sp)         # store sp
     lw t0, 132(sp)       # load mepc
     csrw mepc, t0
-
 
     #Pop register
     lw ra, (sp)
@@ -112,3 +117,17 @@ switch_to:
     lw t6, 124(sp)
 
     mret
+
+.section .text
+.global pc_update
+.type pc_update, @function
+pc_update:
+    lw t6, current       # Load currentPt into T0
+    lw t5, (t6)
+    addi t5, t5, -132    # make a stack frame
+    lw t6, 128(t5)
+   # lw t4, 132(t5)
+   # mv t4, t6
+   # sw t4, 132(t5)
+    csrw mepc, t6
+    ret

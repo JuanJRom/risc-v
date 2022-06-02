@@ -1,0 +1,4 @@
+src/init.o: \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel_red-v/freedom-metal/src/init.c \
+ C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel_red-v/freedom-metal/metal/init.h
+C\:/Users/jjrh/Dropbox/Telecom/Tesis/Source/kernel_sifive/kernel_red-v/freedom-metal/metal/init.h:

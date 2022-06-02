@@ -76,3 +76,12 @@ void timer_init(void) {
 void osSchedulerRoundRobin(void){
 	currentPt = currentPt->nextPt;
 }
+
+void delay(int number_of_microseconds){ //not actually number of seconds
+	// Converting time into multiples of a hundred nS
+	int hundred_ns = 10 * number_of_microseconds;
+	// Storing start time
+	clock_t start_time = clock();
+	// looping till required time is not achieved
+	while (clock() < start_time + hundred_ns);
+}

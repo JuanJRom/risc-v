@@ -1,4 +1,0 @@
-gloss/sys_exit.o: \
- C\:/wsFreedomStudio/qemu_sifive_e31_hello/freedom-metal/gloss/sys_exit.c \
- C\:/wsFreedomStudio/qemu_sifive_e31_hello/freedom-metal/metal/shutdown.h
-C\:/wsFreedomStudio/qemu_sifive_e31_hello/freedom-metal/metal/shutdown.h:

@@ -12,11 +12,10 @@
 #include "kernel.h"
 #include "riscv.h"
 #include "kernel.h"
-#include "queue.h"
 
-typedef struct semaphore_t{
+typedef struct semaphore{
    int32_t value;
-   struct pcb *queue;
+   list_t *queue;
 }semaphore_t;
 
 void semaphore_init(semaphore_t *semaphore, int32_t value);
